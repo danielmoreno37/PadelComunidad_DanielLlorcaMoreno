@@ -1,0 +1,36 @@
+// =============================================================
+// COMPONENTE · AVISO DE PAGO
+// =============================================================
+
+@layer components {
+  .aviso {
+    display: grid;
+    gap: var(--espacio-xs);
+    padding: var(--espacio-m);
+    border: 2px solid var(--color-acento);
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-acento-tenue);
+    color: var(--color-texto);
+
+    &__titulo {
+      font-size: var(--paso-1);
+      font-weight: 700;
+    }
+
+    &__importe {
+      color: var(--color-acento);
+      font-size: var(--paso-2);
+      font-weight: 700;
+    }
+
+    &__telefono {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    &__concepto {
+      font-family: var(--fuente-mono);
+      font-size: var(--paso-menos-1);
+    }
+  }
+}

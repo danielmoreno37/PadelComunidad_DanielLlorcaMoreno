@@ -26,6 +26,7 @@
 
 @layer components {
   .turno {
+    position: relative;
     display: grid;
     gap: var(--espacio-3xs);
     padding: var(--espacio-s);
@@ -33,8 +34,46 @@
     border-radius: var(--radio-tarjeta);
     background-color: var(--color-superficie);
     cursor: pointer;
+    transition: border-color 150ms ease, background-color 150ms ease;
 
-    // TODO: .turno__control, .turno__hora, .turno__estado
-    // TODO: estados seleccionado, ocupado y foco
+    // Radio oculto visualmente, pero accesible mediante teclado
+    &__control {
+      position: absolute;
+      inline-size: 1px;
+      block-size: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    // Hora del turno
+    &__hora {
+      font-size: var(--paso-1);
+      font-weight: 700;
+    }
+
+    // Información del estado
+    &__estado {
+      color: var(--color-texto-suave);
+      font-size: var(--paso-menos-1);
+    }
+
+    // Estado seleccionado
+    &:has(:checked) {
+      border: 3px solid var(--color-acento);
+      background-color: var(--color-acento-tenue);
+    }
+
+    // Estado ocupado
+    &:has(:disabled) {
+      border-style: dashed;
+      background-color: var(--color-fondo);
+      cursor: not-allowed;
+    }
+
+    // Estado de foco
+    &:has(:focus-visible) {
+      @include foco-visible;
+    }
   }
 }

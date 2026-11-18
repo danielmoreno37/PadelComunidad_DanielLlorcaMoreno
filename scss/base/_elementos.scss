@@ -54,4 +54,111 @@
   // TODO Fase 1: redefine al menos estos elementos con tokens
   //   p (medida máxima de línea en ch), small, strong,
   //   ul/ol, hr, table/th/td, fieldset/legend, label, input, select
+
+  // ---------------------------------------------------------
+  // PÁRRAFOS Y TEXTO
+  // ---------------------------------------------------------
+
+  p { // Limita la anchura del texto a 65 caracteres
+    max-inline-size: 65ch;
+    text-wrap: pretty;
+  }
+
+  small { 	// Utiliza el tamaño tipográfico −1
+    font-size: var(--paso-menos-1);
+    color: var(--color-texto-suave);
+  }
+
+  strong {  // Define texto en negrita
+    font-weight: 700;
+  }
+
+  // ---------------------------------------------------------
+  // LISTAS
+  // ---------------------------------------------------------
+
+  ul, ol { // Espaciado de listas
+    padding-inline-start: var(--espacio-m);
+  }
+
+  li {  // Separación de elementos
+    padding-inline-start: var(--espacio-3xs);
+  }
+
+  // ---------------------------------------------------------
+  // SEPARADORES
+  // ---------------------------------------------------------
+
+  hr {  // Separador con color de borde
+    border: 0;
+    border-block-start: 1px solid var(--color-borde);
+    margin-block: var(--espacio-l);
+  }
+
+  // ---------------------------------------------------------
+  // TABLAS
+  // ---------------------------------------------------------
+
+  table { // Tabla adaptable al ancho
+    inline-size: 100%;
+    border-collapse: collapse;
+  }
+
+  th,  td { // Celdas con bordes y espaciado
+    padding: var(--espacio-xs);
+    border-block-end: 1px solid var(--color-borde);
+    text-align: start;
+    vertical-align: middle;
+  }
+
+  th {  // Celda de titulo en negrita
+    font-weight: 700;
+  }
+
+  [data-numerico] {
+    text-align: end;
+    font-variant-numeric: tabular-nums;
+  }
+
+  // ---------------------------------------------------------
+  // FORMULARIOS
+  // ---------------------------------------------------------
+
+  fieldset {  // Contenedor de formularios
+    min-inline-size: 0;
+    padding: var(--espacio-s);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-control);
+  }
+
+  legend {  // Título de formularios
+    padding-inline: var(--espacio-2xs);
+    font-weight: 700;
+  }
+
+  label { // Título de formularios
+    @include objetivo-tactil;
+
+    display: inline-flex;
+    gap: var(--espacio-2xs);
+    align-items: center;
+  }
+
+  :where(input, select, textarea) { // Controles con bordes y colores semánticos
+    @include objetivo-tactil;
+
+    max-inline-size: 100%;
+    padding-inline: var(--espacio-xs);
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font: inherit;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    accent-color: var(--color-acento);
+  }
 }
+
