@@ -1,0 +1,156 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confirmar reserva · Pádel Residencial El Naranjal</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="cabecera__interior contenedor">
+      <a class="cabecera__marca" href="index.html">
+        Pádel Residencial El Naranjal
+      </a>
+
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace" href="index.html">Turnos</a></li>
+          <li><a class="menu__enlace" href="mis-turnos.html">Mis turnos</a></li>
+          <li><a class="menu__enlace" href="normas.html">Normas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor">
+
+    <h1>Confirmar reserva</h1>
+
+    <section aria-labelledby="resumen-titulo">
+      <h2 id="resumen-titulo">Resumen del turno</h2>
+
+      <dl>
+        <dt>Fecha</dt>
+        <dd>20/11/2026</dd>
+
+        <dt>Horario</dt>
+        <dd>09:00 – 10:15</dd>
+
+        <dt>Pista</dt>
+        <dd>Central</dd>
+
+        <dt>Duración</dt>
+        <dd>75 minutos</dd>
+      </dl>
+    </section>
+
+    <form action="justificante.html" method="get">
+
+      <fieldset class="invitados">
+        <legend>¿Cuántos invitados no residentes vienen?</legend>
+
+        <div class="invitados__grupo">
+
+          <label class="invitados__opcion">
+            <input type="radio" name="invitados" value="0" checked>
+            <span>0</span>
+          </label>
+
+          <label class="invitados__opcion">
+            <input type="radio" name="invitados" value="1">
+            <span>1</span>
+          </label>
+
+          <label class="invitados__opcion">
+            <input type="radio" name="invitados" value="2">
+            <span>2</span>
+          </label>
+
+          <label class="invitados__opcion">
+            <input type="radio" name="invitados" value="3">
+            <span>3</span>
+          </label>
+
+        </div>
+
+        <small>Máximo 3 invitados por reserva.</small>
+      </fieldset>
+
+      <section class="aviso" aria-labelledby="aviso-titulo">
+
+        <h2 class="aviso__titulo" id="aviso-titulo">
+          Pago de invitados
+        </h2>
+
+        <p>El precio es de 2,50 € por invitado no residente.</p>
+
+        <p class="aviso__importe">2,50 € por jugador</p>
+
+        <p>
+          Realiza el pago mediante Bizum al teléfono:
+          <span class="aviso__telefono">640 73 57 00</span>
+        </p>
+
+        <p>
+          Concepto del pago:
+          <code class="aviso__concepto">PADEL 3D 20/11</code>
+        </p>
+
+        <small>El pago debe realizarse antes de jugar.</small>
+
+      </section>
+
+      <p>
+        <label>
+          <input type="checkbox" name="aceptar-normas" required>
+          He leído y acepto las
+          <a href="normas.html">normas de uso</a>.
+        </label>
+      </p>
+
+      <button class="boton" type="submit">
+        Confirmar reserva
+      </button>
+
+      <p>
+        <a href="index.html">Volver a los turnos</a>
+      </p>
+
+    </form>
+
+  </main>
+
+  <footer class="pie">
+    <div class="pie__interior contenedor">
+
+      <address class="pie__datos">
+        Comunidad de Propietarios Residencial El Naranjal
+        · CIF H-00000009<br>
+        Paseo de El Naranjal, 24 · 00000 Localidad Ficticia<br>
+        <a href="mailto:administracion@elnaranjal.example">
+          administracion@elnaranjal.example
+        </a>
+      </address>
+
+      <nav aria-label="Legal">
+        <ul class="pie__enlaces">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="normas.html">Normas de uso</a></li>
+        </ul>
+      </nav>
+
+      <p class="pie__nota">
+        <small>Proyecto académico ficticio · DIW 0615 · 2.º DAW</small>
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
