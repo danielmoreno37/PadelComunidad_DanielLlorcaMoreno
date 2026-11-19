@@ -14,9 +14,11 @@
     line-height: var(--interlineado-texto);
   }
 
-  h1,
-  h2,
-  h3 {
+  main {
+    padding-block: var(--espacio-xl);
+  }
+
+  h1, h2, h3 {
     line-height: var(--interlineado-titulo);
     text-wrap: balance;
   }
