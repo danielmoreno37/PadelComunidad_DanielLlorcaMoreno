@@ -1,0 +1,130 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Incidencias · Pádel Residencial El Naranjal</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="cabecera__interior contenedor">
+      <a class="cabecera__marca" href="index.html">
+        Pádel Residencial El Naranjal
+      </a>
+
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li>
+            <a class="menu__enlace" href="index.html" aria-current="page">Turnos</a>
+          </li>
+          <li>
+            <a class="menu__enlace" href="mis-turnos.html">Mis turnos</a>
+          </li>
+          <li>
+            <a class="menu__enlace" href="normas.html">Normas</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor">
+
+    <h1>Comunicar una Incidencia</h1>
+
+    <p>Porfavor, describe la incidencia por la cual quieres informar: <br><br></p>
+
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>Cuentenos su incidencia</legend>
+
+            <label>
+                <input type="radio" name="pista" value="estado" >
+                Estado de la pista
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="pista" value="iluminacion" >
+                Iluminación o Acceso
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="pista" value="reserva" >
+                Reserva o pago 
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="pista" value="convivencia" >
+                Queja de convivencia
+            </label>
+            <br><br>
+            
+            <br><br> 
+
+            <label for="pista">Pista afectada:</label> <br>
+            <input type="text" name="pista" id="pista"  placeholder="Indique la pista afectada"> <br> <br> 
+
+            <div>
+                <label for="fecha">Fecha de la incidencia (aprox):</label> &nbsp; &nbsp;
+                <input type="date" id="fecha" name="fecha" > <br> <br> 
+            </div>
+
+
+            <label for="descripcion">Descripción:</label> <br>
+            <textarea name="descripcion" id="descripcion" placeholder="Descripción de la incidencia" cols="40" rows="5"></textarea> <br><br>
+
+            <label for="correo">Correo de respuesta:</label> &nbsp; &nbsp;  
+            <input type="email" name="correo" id="correo" required placeholder="Su correo electrónico"> <br><br>
+
+            <label for="Privacidad">Politica de privacidad:</label> &nbsp; &nbsp; 
+            <input type="checkbox" name="Privacidad" id="Privacidad" required> He leído y acepto la política de privacidad. <br><br>
+
+
+
+            
+            <button class="boton" type="submit">
+            Enviar
+            </button>
+            <button class="boton boton--peligro" type="reset">
+            Borrar formulario
+            </button>          
+            <a href="index.html" class="boton boton--secundario">Cancelar</a>
+        </fieldset>
+    </form>
+
+  </main>
+
+  <footer class="pie">
+    <div class="pie__interior contenedor">
+
+      <address class="pie__datos">
+        Comunidad de Propietarios Residencial El Naranjal
+        · CIF H-00000009<br>
+        Paseo de El Naranjal, 24 · 00000 Localidad Ficticia<br>
+        <a href="mailto:administracion@elnaranjal.example">
+          administracion@elnaranjal.example
+        </a>
+      </address>
+
+      <nav aria-label="Legal">
+        <ul class="pie__enlaces">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="normas.html">Normas de uso</a></li>
+        </ul>
+      </nav>
+
+      <p class="pie__nota">
+        <small>Proyecto académico ficticio · DIW 0615 · 2.º DAW</small>
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
